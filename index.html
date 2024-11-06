@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traditional Indian Diya with HTML and CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        *,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffd400, #820263);
+}
+.container {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.diya {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 70%;
+  height: 200px;
+  width: 300px;
+  position: absolute;
+  background: yellow;
+  border-radius: 0 0 50% 50%;
+  overflow: hidden;
+}
+
+.inside {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  background: orangered;
+  width: 300px;
+  height: 100px;
+  border-radius: 50%;
+}
+.light {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  z-index: -1;
+}
+.flame {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 150px;
+  background: radial-gradient(circle at bottom, yellow, red);
+  border-radius: 100% 100% 100% 100%;
+  animation: flicker 0.5s infinite alternate;
+  transform-origin: bottom center;
+}
+@keyframes flicker {
+  0% {
+    transform: translate(-50%, -50%) scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -55%) scaleY(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleY(0.95);
+    opacity: 1;
+  }
+}
+h1 {
+  color: #fff;
+  position: absolute;
+  top: 85%;
+  font-size: 3.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h5 {
+  color: #fff;
+  position: absolute;
+  top: 95%;
+  font-size: 3.rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="diya"></div>
+      <div class="inside">
+        <div class="light"></div>
+        <div class="flame"></div>
+      </div>
+    </div>
+    <h1>HAPPY DIWALI</h1><br>
+    <h5>made by Shah Dhairya</h5>
+  </body>
+</html>
